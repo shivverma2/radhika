@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shivam Photo</title>   <!-- 🔹 Title बदल दिया -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      /* Background Image */
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .box {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+    input {
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Enter Password</h2>
+    <input type="password" id="password" placeholder="Enter Password">
+    <br>
+    <button onclick="checkPassword()">Submit</button>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const password = document.getElementById("password").value;
+
+      // 🔹 पासवर्ड सेट
+      const user1Password = "12345";
+      const user2Password = "Radhika";
+
+      if (password === user1Password) {
+        window.location.href = "https://www.google.com";  
+      } else if (password === user2Password) {
+        window.location.href = "https://radhikashiv.netlify.app/gallery"; 
+      } else {
+        document.getElementById("message").innerText = "❌ Wrong Password!";
+      }
+    }
+  </script>
+</body>
+</html>
